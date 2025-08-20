@@ -8,15 +8,70 @@
 
     <section id="i-header">
         <div class="i-header-logo">
-            <img src="https://du11hjcvx0uqb.cloudfront.net/dist/images/apple-touch-icon-585e5d997d.png" alt="Logo">
+            <img src="images/i-header-icon.png" id="i-header-logo-img-1" alt="Logo">
+            <img src="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/6db3da5b7a73697f.svg" id="i-header-logo-img-2" alt="Logo">
         </div>
 
-        <a href="https://canvas.instructure.com/search/all_courses" class="i-header-link">
-            Browse Courses
-        </a>
+        <div class="i-header-link-container">
+            <a href="https://canvas.instructure.com/search/all_courses" class="i-header-link">
+                Browse Courses
+            </a>
+        </div>
     </section>
 </head>
-<body>
 
+<body class="body">
+<section id="i-login">
+    <div class="i-login-container">
+        <h1 class="i-login-title">
+            Welcome to Canvas
+        </h1>
+        <p class="i-login-sub-title">
+            Log in or <a href="https://canvas.instructure.com/login/canvas/register" class="i-login-sub-title-link">create an account.</a>
+        </p>
+        <form action="https://canvas.instructure.com/login/canvas" method="post" class="form">
+            <label for="username" class="username-element">Email *</label>
+            <input type="text" id="username" name="pseudonym_session[unique_id]" class="username-element" required>
+
+            <label for="password" class="password-element">Password *</label>
+            <input type="password" id="password" name="pseudonym_session[password]" class="password-element" required>
+            
+            <div class="i-login-remember-me-container">
+                <input type="checkbox" name="remember_me" id="remember_me" value="1" class="remember-me-element">
+                <label class="remember-me-element" id="remember_me-label">Remember me</label>
+            </div>
+
+            <div id="i-login-button-container">
+                <button type="submit" id="Log_in-button">Log In</button>
+                
+                <div class="i-login-forgot-password-container">
+                    <a class="i-login-forgot-password" href="https://canvas.instructure.com/login/canvas/forgot-password">Forgot password?</a>
+                    <a class="i-trouble-logging-in" href="https://community.canvaslms.com/t5/Troubleshooting/Logging-into-Canvas/ta-p/875/redirect_from_archived_page/true">Trouble logging in?</a>
+                </div>
+            </div>
+
+            <div class="i-login-with-container">
+                <button type="submit" id="Log_in_with-Apple" class="Log_in_with"><img class="log_in_with-icon" id="apple-logo" src="images/apple-icon.png" alt="Logo">Log in with Apple</button>
+                <button type="submit" id="Log_in_with-Facebook" class="Log_in_with"><img class="log_in_with-icon" id="facebook-logo" src="images/facebook-icon.png" alt="Logo">Log in with Facebook</button>
+                <button type="submit" id="Log_in_with-GitHub" class="Log_in_with"><img class="log_in_with-icon" id="github-logo" src="images/github-icon.png" alt="Logo">Log in with GitHub</button>
+                <button type="submit" id="Log_in_with-Google" class="Log_in_with"><img class="log_in_with-icon" id="google-logo" src="images/google-icon.png" alt="Logo">Log in with Google</button>
+                <button type="submit" id="Log_in_with-Linkedin" class="Log_in_with"><img class="log_in_with-icon" id="linkdin-logo" src="images/linkdin-icon.png" alt="Logo">Log in with Linkedin</button>
+                <button type="submit" id="Log_in_with-Microsoft" class="Log_in_with"2><img class="log_in_with-icon" id="microsoft-logo" src="images/microsoft-icon.png" alt="Logo">Log in with Microsoft</button>
+            </div>
+
+            <div class="i-footnote-list-container">
+                <ol class="i-footnote-list">
+                    <li class="i-footnote-list-item"><a href="#" class="i-footnote-list-link">Help</a></li>
+                    <li class="i-footnote-list-item"><a href="https://www.instructure.com/policies/product-privacy-policy" class="i-footnote-list-link">Privacy Policy</a></li>
+                    <li class="i-footnote-list-item"><a href="https://www.instructure.com/policies/canvas-lms-cookie-notice" class="i-footnote-list-link">Cookie Notice</a></li>
+                    <li class="i-footnote-list-item"><a href="https://canvas.instructure.com/acceptable_use_policy" class="i-footnote-list-link">Acceptable Use Policy</a></li>
+                </ol>
+            </div>
+
+            <div id="footnote-logo-container">
+                <img id="footnote-logo" src="images/footnote-icon.png" alt="Logo">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
